@@ -15,7 +15,7 @@
 + JavaScript Basics
 + Unity Basics(C#)
 + adobe Photoshop
-+ Microsoft Office(Exel, Word, PowerPoint)
++ Microsoft Office(Exel, Word, PowerPoint)  
 ---  
 ## Code example:  
 ```  
@@ -39,13 +39,12 @@ function findSolution(target){
    + Master degree in Timber Industry Engineering (2018)
    + Advanced training: Design, construction and operation of transportation and storage of oil and gas (2018)
 + Online courses:
-   + [Building a 2D platformer with Unity](https://www.udemy.com/course/unity-2019/)
+   + [Building a 2D platformer with Unity](https://www.udemy.com/course/unity-2019/)  
 ---  
 
 ## Work experience:  
 + Asphalt laboratory technician(2022)  
----
-
+---  
 ## Languages:  
 + Russian - native speaker
 + English - Intermediate (according to the online test at [![](https://a.storyblok.com/f/71234/103x24/da9ab91cbd/efset-logo_black.svg)](https://www.efset.org/) )  
