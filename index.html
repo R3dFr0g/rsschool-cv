@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>rsschool-cv</title>
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href = "#Contact information"> Contact information</a></li>
+            <li><a href = "#About myself"> About myself</a></li>
+            <li><a href = "#Proffesional skills"> Proffesional skills</a></li>
+            <li><a href = "#Code example"> Code example</a></li>
+            <li><a href = "#Education and courses"> Education and courses</a></li>
+            <li><a href = "#Work experience"> Work experience</a></li>
+            <li><a href = "#Languages"> Languages</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <h1>Ospanov Timur</h1>
+    </section>
+    <section id="Contact information">
+        <h2>Contact information</h2>
+    </section>
+    <section id="About myself"><br>
+        <h2>About myself</h2>
+        <p>I am interested in information technology and try to improve my programming skills.</p>
+    </section>
+    <section id="Proffesional skills">
+        <h2>Professional skills</h2>
+        <ul>
+            <li>C++ Basics</li>
+            <li>JavaScript Basics</li>
+            <li>Unity Basics(C#)</li>
+            <li>adobe Photoshop</li>
+            <li>Microsoft Office(Exel, Word, PowerPoint)</li>
+        </ul>
+    </section>
+    <section id="Code example">
+        <h2>Code example</h2>
+        <pre><code>
+            // learning a recursion  
+            function findSolution(target){
+            
+              function find(current, history){
+            
+                      if (current == target)      { return history; }
+                      else if (current > target)  { return null; }
+                      else { return find(current + 5, `(${history} + 5)`)||
+                                    find(current * 3, `(${history} * 3)`);}
+              };
+              return find (1, `1`);};
+            }
+        </code></pre>
+    </section>
+    <section id="Education and courses">
+        <h2>Education and courses</h2>
+        <ul>
+            <li>Ukhta State Technical University:</li>
+                    <ul>
+                        <li>Bachelor degree in the Timber Industry Engineering (2016)</li>
+                        <li>Master degree in Timber Industry Engineering (2018)</li>
+                        <li>Advanced training: Design, construction and operation of transportation and storage of oil and gas (2018)</li>
+                    </ul>
+            <li>Online courses:</li>
+                <ul>Building a 2D platformer with Unity</ul>
+        </ul>
+    </section>
+    <section id="Work experience">
+        <h2>Work experience</h2>
+        <ul><li>Asphalt laboratory technician(2022)</li></ul>
+    </section>
+    <section id="Languages">
+        <h2>Languages</h2>
+        <ul>
+            <li>Russian - native speaker</li>
+            <li>English - Intermediate (according to the online test at https://www.efset.org/ )</li>
+        </ul>
+    </section>
+</main>
+</body>
+</html>
