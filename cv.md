@@ -15,7 +15,7 @@
 + JavaScript Basics
 + Unity Basics(C#)
 + adobe Photoshop
-+ Microsoft Office(Exel, Word, PowerPoint)
+
 ---  
 ## Code example:  
 ```  
