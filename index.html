@@ -4,9 +4,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./styles.css">
     <title>R3dFr0g`s CV</title>
 </head>
 <body>
+    <header>
+        <img src="" alt="my photo.">
+        <h1>Timur(R3dFr0g)</h1>
+        <section>
+            <h2>About myself:</h2>
+            <p>Hello, my nick is R3dFr0g and I am trying to become a web programmer. I hope that soon my experience will be enough to start a professional career.
+            </p>
+        </section>
+        <section>
+            <h2>Contact information:</h2>
+            <img src="" alt="Discord logo">
+            <img src="" alt="e-mail logo">
+        </section>
+        <nav>
+            <ul>
+                <li><a href="">About Myself</a></li>
+                <li><a href="">Professional skills</a></li>
+                <li><a href="">Code Example</a></li>
+                <li><a href="">Education</a></li>
+                <li><a href="">Work experience</a></li>
+                <li><a href="">Languages</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Professional skills</h2>
+            <ul>
+                <li>C++ Basics</li>
+                <li>JavaScript Basics</li>
+                <li>HTML + CSS Basics</li>
+                <li>Unity Basics(C#)</li>
+                <li>Adobe Photoshop</li>
+                <li>Microsoft Office(Exel,Word,PowerPoint)</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Code Example:</h2>
+            <pre>
+                <code>
+//Merge two sorted arrays into one.
+function mergeArrays(arr1, arr2) {
     
+let result  = arr1.concat(...arr2);
+result.sort((a, b) => (a - b));
+result = result.filter((item,index) => result.indexOf(item) === index);
+
+return result;
+}
+                </code>
+            </pre>
+        </section>
+        <section>
+            <h2>Education and courses:</h2>
+            <ul>
+                <li>
+                    <a href="https://www.ugtu.net/">Ukhta State Technical University</a>
+                        <ul>
+                            <li>Bachelor degree in the Timber Industry Engineering (2016)</li>
+                            <li>Master degree in Timber Industry Engineering (2018)</li>
+                            <li>Advanced training: Design, construction and operation of transportation and storage of oil and gas (2018)</li>
+                        </ul>
+                </li>
+                <li>Online courses:
+                    <ul>
+                        <li><a href="https://www.udemy.com/course/unity-2019/">Building a 2D platformer with Unity</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Work experience:</h2>
+            <ul>
+                <li>Asphalt laboratory technician(2022)</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Languages:</h2>
+            <ul>
+                <li>Russian - native speaker</li>
+                <li>English - Intermediate (according to the online test at <a href="https://www.efset.org/"><img src="https://a.storyblok.com/f/71234/103x24/da9ab91cbd/efset-logo_black.svg" alt="EFSET logo"></a>)</li>
+            </ul>
+        </section>
+    </main>
+    <footer></footer>
 </body>
 </html>
