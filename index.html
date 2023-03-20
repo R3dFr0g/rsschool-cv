@@ -61,9 +61,9 @@
             <!-- <p id="myInput">r3d.fr0g31337@gmail.com</p> -->
             <input id="myInput" type="text" readonly value="r3d.fr0g31337@gmail.com" >
             <div class="buttons">
-                <button form="" onclick="copyInputText()">copy to clipboard</button>
+                <button type="button" form="" onclick="copyInputText()">copy to clipboard</button>
                 <!-- <a href="" onclick="myFunction()">copy to clipboard</a> -->
-                <a id="close" class="close" href="#" title="close this window">Close</a>
+                <a class="close" href="#" title="close this window">Close</a>
             </div>
         </div>
     </div>
@@ -74,8 +74,8 @@
             <input id="myInput2" type="text" readonly value="r3d.fr0g#8032" >
             <div class="buttons">
                 <!-- <a href="">copy to clipboard</a> -->
-                <button form="" onclick="copyInputText2()">copy to clipboard</button>
-                <a id="close" class="close" href="#" title="close this window">Close</a>
+                <button type="button" form="" onclick="copyInputText2()">copy to clipboard</button>
+                <a class="close" href="#" title="close this window">Close</a>
             </div>
         </div>
     </div>
@@ -100,8 +100,8 @@
     function mergeArrays(arr1, arr2) {
         
     let result  = arr1.concat(...arr2);
-    result.sort((a, b) => (a - b));
-    result = result.filter((item,index) => result.indexOf(item) === index);
+    result.sort((a, b) =&gt; (a - b));
+    result = result.filter((item,index) =&gt; result.indexOf(item) === index);
     
     return result;
     }
@@ -116,8 +116,8 @@
     function mergeArrays(arr1, arr2) {
         
     let result  = arr1.concat(...arr2);
-    result.sort((a, b) => (a - b));
-    result = result.filter((item,index) =>
+    result.sort((a, b) =&gt; (a - b));
+    result = result.filter((item,index) =&gt;
     result.indexOf(item) === index);
     
     return result;
