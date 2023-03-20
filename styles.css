@@ -1,0 +1,644 @@
+/* Study attempt to use css(flex,media queries,keyframes etc.)Funny but not clear =) */
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* background-color: aqua; */
+    background: rgb(224,224,224);
+    background: radial-gradient(circle, rgba(224,224,224,1) 0%, rgba(103,67,79,1) 78%, rgba(0,0,0,1) 100%);
+}  
+/* modal window (contact info) */
+/* #modalWindowWrapper {
+    display: none;
+} */
+@keyframes showWindow {
+    0% {
+        /* opacity: 0%; */
+        height: 0px;
+        width: 100%;
+    }
+    100% {
+        /* opacity: 100%; */
+        height: 300px;
+        width: 100%;
+    }
+}
+@keyframes closeWindow {
+    0% {
+        height: 300px;
+    }
+    100% {
+        height: 0px;
+    }
+}
+#modalWindowWrapperDiscord {
+    display: none;
+    /* height: 0;
+    width: 0; */
+    /* visibility: hidden; */
+    background-color: #121212;  
+}
+#modalWindowWrapperEmail {
+    display: none;
+    /* height: 0;
+    width: 0; */
+    /* visibility: hidden; */
+    background-color: #121212;  
+}
+#modalWindowWrapperDiscord:target {
+    /* visibility: visible; */
+    display:flex;
+    animation: showWindow 0.5s linear;
+}
+#modalWindowWrapperEmail:target {
+    /* visibility: visible; */
+    display:flex;
+    animation: showWindow 0.5s linear;
+}
+.contactsWindowEmail{
+    /* margin: 50% auto; */
+    margin: 0 auto;
+    width: 30vw;
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(203, 173, 165);
+    border: 2px solid #67434F;
+    border-radius: 5px;
+}
+.contactsWindowEmail p {
+    /* margin-top: 45%; */
+    background-color: #67434F;
+    border: 0.3px solid black;
+    border-radius: 5px;
+    padding: 3px 5px;
+    width: 80%;
+    font-size: 20px;
+}
+.contactsWindowEmail img {
+    margin-top: 10px;
+    height: 80px;
+}
+input {
+    text-align: center;
+    border-radius: 5px;
+    background-color: #67434F;
+}
+.buttons {
+   margin-bottom: 10%;
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.buttons a{
+    text-decoration: none;
+        color: black;
+        padding: 5px;
+        background-color: #ffffff;
+        border: 0.3px solid black;
+        border-radius: 5px;
+        width: 70%;
+        margin-bottom: 5px;
+}
+.buttons button{
+    text-decoration: none;
+        color: black;
+        padding: 5px;
+        background-color: #ffffff;
+        border: 0.3px solid black;
+        border-radius: 5px;
+        width: 73%;
+        margin-bottom: 5px;
+}
+@media (max-width:901px){
+    .contactsWindowEmail{
+        width: 60vw;
+        height: 60vw;
+    }
+}
+@media (max-width:458px) {
+    .contactsWindowEmail{
+        width: 90vw;
+        min-height: 90vw;
+    }
+    .contactsWindowEmail p {
+        font-size: 14px;
+    }
+    .contactsWindowEmail img {
+        margin-top: 10px;
+        height: 80px;
+    }
+}
+@media (max-width:236px){
+    .contactsWindowEmail{
+        width: 90vw;
+        min-height: 100vw;
+    }
+    .contactsWindowEmail p {
+        font-size: 6vw;
+    }
+    .buttons a{
+        font-size: 6vw;
+    }
+    .contactsWindowEmail img {
+        margin-top: 10px;
+        height: 40vw;
+    }
+}
+/* HEADER */
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: bisque; */
+}
+/* Add CSS only animation for Header Background 
+made by Temani Afif(Just for Fun) */
+header{
+    --s: 100px; /* control the size */
+    --c1: #C3CCAF;
+    --c2: #67434F;
+    
+    --_s: calc(2*var(--s)) calc(2*var(--s));
+    --_g: var(--_s) conic-gradient(at 40% 40%,#0000 75%,var(--c1) 0);
+    --_p: var(--_s) conic-gradient(at 20% 20%,#0000 75%,var(--c2) 0);
+    background:
+      calc( .9*var(--s)) calc( .9*var(--s))/var(--_p),
+      calc(-.1*var(--s)) calc(-.1*var(--s))/var(--_p),
+      calc( .7*var(--s)) calc( .7*var(--s))/var(--_g),
+      calc(-.3*var(--s)) calc(-.3*var(--s))/var(--_g),
+      conic-gradient(from 90deg at 20% 20%,var(--c2) 25%,var(--c1) 0) 
+       0 0/var(--s) var(--s);
+    animation: m 3s infinite;
+  }
+  @keyframes m {
+    0% {
+     background-position: 
+      calc( .9*var(--s)) calc( .9*var(--s)),
+      calc(-.1*var(--s)) calc(-.1*var(--s)),
+      calc( .7*var(--s)) calc( .7*var(--s)),
+      calc(-.3*var(--s)) calc(-.3*var(--s)),0 0
+    }
+    25% {
+     background-position: 
+      calc(1.9*var(--s)) calc( .9*var(--s)),
+      calc(-1.1*var(--s)) calc(-.1*var(--s)),
+      calc(1.7*var(--s)) calc( .7*var(--s)),
+      calc(-1.3*var(--s)) calc(-.3*var(--s)),0 0
+    }
+    50% {
+     background-position: 
+      calc(1.9*var(--s)) calc(-.1*var(--s)),
+      calc(-1.1*var(--s)) calc( .9*var(--s)),
+      calc(1.7*var(--s)) calc(-.3*var(--s)),
+      calc(-1.3*var(--s)) calc( .7*var(--s)),0 0
+    }
+    75% {
+     background-position: 
+      calc(2.9*var(--s)) calc(-.1*var(--s)),
+      calc(-2.1*var(--s)) calc( .9*var(--s)),
+      calc(2.7*var(--s)) calc(-.3*var(--s)),
+      calc(-2.3*var(--s)) calc( .7*var(--s)),0 0
+    }
+    100% {
+     background-position: 
+      calc(2.9*var(--s)) calc(-1.1*var(--s)),
+      calc(-2.1*var(--s)) calc(1.9*var(--s)),
+      calc(2.7*var(--s)) calc(-1.3*var(--s)),
+      calc(-2.3*var(--s)) calc(1.7*var(--s)),0 0
+    }
+  }
+.headerWrapper{
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-top: 1%;
+    /* margin-bottom: 1%; */
+    padding-bottom: 5px;
+    /* border: 1px solid white; */
+    background-color: rgba(1,1,1,0.7);
+    color: white;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.infoAndContacts{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: aliceblue; */
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100%;
+    /* flex-basis: 60% 40%; */
+    text-shadow: 2px 1px 0 black;
+}
+.Info{
+    width: 100%; 
+    display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+     padding-left: 3%;
+     /* border: 1px solid blue; */
+}
+.contactsMobile{
+    display: none;
+}
+.Contacts {
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 3vw; */
+    height: 100%;
+}
+.Contacts img {
+    max-height: 7vw;
+    max-width: 7vw;
+    /* background-color: burlywood; */
+}
+/* NAVIGATION(in header) */
+.navigation{
+    width: 80%;
+    display: flex;
+    /* flex-grow: 0; */
+    /* flex-shrink: 1; */
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    background-color: rgba(1,1,1,0.7);
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+}
+.navigation ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline-start: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+.navigation ul li{
+
+    display: flex;
+    list-style: none;
+    height: fit-content;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.navigation ul li a {
+    text-decoration: none;
+    color: black;
+    background-color: rgb(95, 100, 100);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.3rem;
+}
+.navigation ul li a:hover {
+    background-color:#67434F;
+}
+.myLogo{
+    height: 150px;
+    width: 150px;
+    height: 20vw;
+    width: 20vw;
+    /* height: 100vw; */
+    /* padding-bottom: 3px; */
+    /* background-color: rgb(138, 132, 132); */
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin: 3px;
+}
+.myLogo img {
+    /* border: 4px solid #463037 ; */
+}
+/* MAIN */
+.main {
+    min-height: 100vh;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    /* text-align: center; */
+}
+.main section {
+    background-color: #C3CCAF;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.main section h2 {
+    text-align: center;
+}
+.skills li {
+    list-style: none;
+}
+.skills li::before{
+    content: '►';
+    font-size: 15px;
+}
+pre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+code {
+    /* background-color: black; */
+   margin-left: 10px;
+   margin-right: 10px;
+   border-radius: 5px;
+   overflow-y: hidden;
+}
+.codeExampleMobileVersion{
+    display: none;
+}
+.education a {
+   text-decoration:underline;
+   color: #463037;
+   text-shadow: 1px 0px 0 black;
+}
+/* FOOTER */
+.footer{
+    border-top: 2px solid rgba(0,0,0,0.8);
+        background: linear-gradient(271deg, #a86f5e, #bcd4db, #121212);
+        background-size: 600% 600%;
+        animation: AnimationName 20s ease infinite;
+    width: 100%;
+    min-height: 20%;
+    /* background-color: gray; */
+    background-color: #C3CCAF;;
+    display: flex;
+    flex-direction: column  ;
+    justify-content: space-between;
+    align-items: center;
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+.footerWrapper{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.footerWrapper img {
+    /* height: 4vw; */
+    /* width: 4vw; */
+    height: 70px;
+    width: 70px;
+}
+.rsschool{
+    align-self: flex-end;
+}
+.rsschool img {
+    /* min-height: 5vw; */
+    /* min-width: 5vw; */
+    height: 100px;
+    width: 100px;
+}
+.yearAndCopyRights{
+    /* display: flex; */
+    align-self:flex-end;
+   /* justify-content: flex-end; */
+   /* align-items: flex-end; */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.yearAndCopyRights img {
+    margin-top: 10px;
+    margin-left: auto;
+ margin-right: auto;
+}
+
+@media (min-width:1250px) {
+    
+    body{
+        background-color: white;
+    }
+
+    *{
+        font-size: 20px;
+     }
+
+     .Contacts img {
+        height: 5vw;
+        width: 5vw;
+     }
+     .myLogo {
+        width: 20vw;
+        height: 20vw;
+     }
+ }
+
+ @media (min-width:2500px){
+    *{
+        font-size: 40px;
+    }
+ }
+ @media (max-width:852px) {
+     /* MAIN */
+    
+     .codeExample {
+        display: none;
+    }
+    .codeExampleMobileVersion{
+        display:block;
+        
+    }
+ }
+@media (max-width:580px){
+    .headerWrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .myLogo{
+        height: 40vw;
+        width: 40vw;
+    }
+    .infoAndContacts {
+        flex-wrap: wrap;
+    }
+    /* 
+      .Contacts{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 3vw;
+       
+    }
+    .Contacts img{
+        width: 4rem;
+        height: 4rem;
+    }
+    */
+    .Contacts{
+        display: none;
+    }
+    .contactsMobile{
+        width: 100%;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+    }
+    .contactsLogo{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around     ;
+    }
+    .contactsLogo img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+  
+    .Info {
+        font-size: 3vw;
+    }
+    .navigation ul {
+        flex-direction: column;
+        align-items: center ;
+        justify-content: space-between;
+    }
+    .navigation ul li{
+        margin-bottom: 0.5rem;
+        justify-content: center;
+    }
+    .navigation ul:first-child {
+        margin-top: 0.5rem;
+    }
+    .navigation ul li a{
+        padding-left: 3rem;
+        padding-right: 3rem;
+        border-radius: 10%;
+        /* max-width: 80%; */
+       min-width: 110px;
+        max-width: 80vw;
+        text-align: center;
+    }
+   
+
+    /* FOOTER */
+    .footerWrapper {
+        font-size: 4vw;
+    }
+    .footerWrapper img {
+        height: 9vw;
+        width: 9vw;
+        /* height: 50px; */
+        /* width: 50px; */
+    }
+    .rsschool img {
+        min-height: 10vw;
+        min-width: 10vw;
+        /* height: 70px; */
+        /* width: 70px; */
+    }
+   
+}
+@media(max-width:375px){
+    .headerWrapper{
+        min-width: 100%;
+    }
+    .navigation{
+        min-width: 100vw;
+    }
+    .Info{
+        font-size: 10px;
+    }
+    .Info h1 {
+        font-size: 12px;
+        text-align: center;
+    }
+    .navigation {
+        font-size: 10px;
+    }
+    .navigation ul li a {
+        padding: 0;
+        /* min-width: 80vw; */
+        min-width: 80vw;
+        text-align: center;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+    .Contacts{
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 12px;
+    }
+    .Contacts img{
+        min-width: 25px;
+        min-height: 25px;
+    }
+}
+@media (max-width:785px){
+    /* .navigation {
+     flex-direction: column;
+    } */
+    .navigation ul {
+        flex-direction: column;
+    }
+     .navigation ul li a{
+         min-width: 50vw;
+         text-align: center;
+         margin: 5px;
+     }
+     .infoAndContacts {
+        flex-wrap: wrap;
+    }
+     .Contacts{
+        display: none;
+    }
+    .contactsMobile{
+        width: 100%;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+    }
+    .contactsLogo{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+    }
+    .contactsLogo img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+     /* .Contacts{
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 12px;
+    } */
+ }
