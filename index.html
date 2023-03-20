@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./night-owl.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Learn Flex</title>
+</head>
+<body>
+    <header>
+        <div class="headerWrapper">
+            <div class="myLogo">
+                <img  class="myLogo" src="./img/myLogo.jpg" alt="MyLogo">
+            </div>
+            <div class="infoAndContacts">
+                <div class="Info">
+                    <section id="aboutMyself">
+                        <h1 id="R3dFr0g"><span>&nbsp;</span> R3dFr0g(Timur)</h1>
+                        <p><span>&nbsp;&nbsp;&nbsp;&nbsp;</span> Hello, my nickname is R3dFr0g and I am trying to become a web programmer. I hope that soon my experience will be enough to start a professional career.</p>
+                    </section>
+                </div>  
+                <div class="Contacts">
+                    <h2>Contacts:</h2>
+                    <a href="#modalWindowWrapperDiscord" title="show Discord">
+                        <img class="discord" src="./img/discord logo2.png" alt="discord logo">
+                    </a>
+                    <a href="#modalWindowWrapperEmail" title="show e-mail">
+                        <img class="e-mail" src="./img/e-mail logo.png" alt="e-mail logo">
+                    </a>
+                </div>
+                <div class="contactsMobile">
+                    <h2>Contacts:</h2>
+                    <div class="contactsLogo">
+                        <a href="#modalWindowWrapperDiscord" title="show Discord">
+                            <img class="discord" src="./img/discord logo2.png" alt="discord logo">
+                        </a>
+                        <a href="#modalWindowWrapperEmail" title="show e-mail">
+                            <img class="e-mail" src="./img/e-mail logo.png" alt="e-mail logo">
+                        </a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#aboutMyself">About myself</a></li>
+                <li><a href="#skills">Proffesional Skills</a></li>
+                <li><a href="#codeExample">Code Example</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Work experience</a></li>
+                <li><a href="#languages">Languages</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="modalWindowWrapperEmail">
+        <div id="contactsWindowEmail" class="contactsWindowEmail">
+            <img src="./img/e-mail logo.png" alt="e-mail logo">
+            <!-- <p id="myInput">r3d.fr0g31337@gmail.com</p> -->
+            <input id="myInput" type="text" readonly value="r3d.fr0g31337@gmail.com" >
+            <div class="buttons">
+                <button form="" onclick="copyInputText()">copy to clipboard</button>
+                <!-- <a href="" onclick="myFunction()">copy to clipboard</a> -->
+                <a id="close" class="close" href="#" title="close this window">Close</a>
+            </div>
+        </div>
+    </div>
+    <div id="modalWindowWrapperDiscord">
+        <div id="contactsWindowDiscord" class="contactsWindowEmail">
+            <img src="./img/discord logo2.png" alt="discord logo">
+            <!-- <p>r3d.fr0g#8032</p> -->
+            <input id="myInput2" type="text" readonly value="r3d.fr0g#8032" >
+            <div class="buttons">
+                <!-- <a href="">copy to clipboard</a> -->
+                <button form="" onclick="copyInputText2()">copy to clipboard</button>
+                <a id="close" class="close" href="#" title="close this window">Close</a>
+            </div>
+        </div>
+    </div>
+    <main class="main">
+        <section id="skills" class="skills">
+            <h2>Professional skills:</h2>
+            <ul>
+                <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>C++ Basics</li>
+                <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>JavaScript Basics</li>
+                <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>HTML + CSS Basics</li>
+                <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>Unity Basics(C#)</li>
+                <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>Adobe Photoshop</li>
+                <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>Microsoft Office(Exel, Word, PowerPoint)</li>
+            </ul>
+        </section>
+        <div id="codeExample">
+            <section  class="codeExample">
+                <h2>Code Example:</h2>
+                <pre>
+                    <code>
+    //Merge two sorted arrays into one.
+    function mergeArrays(arr1, arr2) {
+        
+    let result  = arr1.concat(...arr2);
+    result.sort((a, b) => (a - b));
+    result = result.filter((item,index) => result.indexOf(item) === index);
+    
+    return result;
+    }
+                    </code>
+                </pre>
+            </section>
+            <section class="codeExampleMobileVersion">
+                <h2>Code Example:</h2>
+                <pre>
+                    <code>
+    //Merge two sorted arrays into one.
+    function mergeArrays(arr1, arr2) {
+        
+    let result  = arr1.concat(...arr2);
+    result.sort((a, b) => (a - b));
+    result = result.filter((item,index) =>
+    result.indexOf(item) === index);
+    
+    return result;
+    }
+                    </code>
+                </pre>
+            </section>
+        </div>
+        <section id="education" class="education">
+            <h2>Education and courses:</h2>
+            <ul>
+                <li>
+                    <a href="https://www.ugtu.net/" title="link to my University" target="_blank">Ukhta State Technical University</a>
+                        <ul>
+                            <li>Bachelor degree in the Timber Industry Engineering (2016)</li>
+                            <li>Master degree in Timber Industry Engineering (2018)</li>
+                            <li>Advanced training: Design, construction and operation of transportation and storage of oil and gas (2018)</li>
+                        </ul>
+                </li>
+                <li>Online courses:
+                    <ul>
+                        <li><a href="https://www.udemy.com/course/unity-2019/" title="link to online course" target="_blank">Building a 2D platformer with Unity</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section id="experience" class="experience">
+            <h2>Work experience:</h2>
+            <ul>
+                <li>Asphalt laboratory technician(2022)</li>
+            </ul>
+        </section>
+        <section id="languages" class="languages">
+            <h2>Languages:</h2>
+            <ul>
+                <li>Russian - native speaker</li>
+                <li>English - Intermediate (according to the online test at <a href="https://www.efset.org/" title="link to EFSET" target="_blank"><img src="https://a.storyblok.com/f/71234/103x24/da9ab91cbd/efset-logo_black.svg" alt="EFSET logo"></a>)</li>
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footerWrapper">
+            <div class="rsschool">
+            <a href="https://rs.school/" target="_blank" title="link to The Rolling Scopes School"> 
+                <img src="./img/rs_school.svg" alt="rs school logo">
+            </a>
+            </div>  
+            <div class="yearAndCopyRights">
+                <a href="#R3dFr0g" title="RedFrog logo">
+                    <img src="./img/d5237e81302663b3bb27f80709cf58f0-removebg-preview.png" alt="RedFrog Logo"> 
+                </a>
+                <br>
+                2023.All rights reserved.☺
+            </div>
+            <div class="myGitHub">
+                <a href="https://github.com/R3dFr0g" target="_blank" title="link to my github">
+                    <img src="./img/25231.png" alt="GitHub logo">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/highlight.min.js"> </script>
+    <script src="./js/copyToClipBoard.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>
